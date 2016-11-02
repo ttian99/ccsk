@@ -11,15 +11,8 @@ module.exports = {
   },
   module: {
     loaders: [
-      {
-        test: /\.(js)$/, 
-        loader: 'ss-loader',
-        exclude: /node_modules/,
-        include: "/lib/"
-      },
-      {
-        test: /\.(json)/, loader: 'json',
-      },
+      { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"},
+      { test: /\.(json)/, loader: 'json'}
     ]
   }
 }
